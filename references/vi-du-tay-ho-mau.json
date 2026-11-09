@@ -1,0 +1,1083 @@
+{
+ "_huong_dan": "Claude điền theo SKILL.md của ban-do-tien-ich-nha-dat. Mốc giây = giây AUDIO. Không bịa toạ độ / số liệu nhà; khoảng cách đo bản đồ luôn '≈'.",
+ "audio": "..\\Audio.mp3",
+ "res": "..\\Resources",
+ "thoi_luong": 65.291,
+ "kenh": {
+  "ten": "",
+  "logo": null,
+  "cta": null
+ },
+ "khu_vuc": {
+  "ten": "Hà Nội",
+  "lat": 21.063,
+  "lon": 105.8271
+ },
+ "thong_tin": {
+  "_nguon": "lời đọc (không có file thông tin nhà riêng)",
+  "loai": "Đất thổ cư liền thổ (có nhà trên đất — ảnh Resources)",
+  "dien_tich": "250 m²",
+  "mat_tien": "15 m",
+  "phap_ly": "Sổ đỏ chính chủ, sang tên ngay",
+  "gia": "Nhỉnh 80 tỷ",
+  "vi_tri": "Giữa phố Xuân Diệu và Đặng Thai Mai, Tây Hồ, Hà Nội",
+  "lien_he": {
+   "ten": "Lê Anh",
+   "sdt": "0904 28 28 58"
+  }
+ },
+ "nha": {
+  "lat": 21.0651638,
+  "lon": 105.8234162,
+  "chinh_xac": true,
+  "ban_kinh_m": 80,
+  "_vi_sao": "Người dùng gửi ghim Google Maps 09/11/2026: 21°03'54.6\"N 105°49'24.3\"E (21.0651638, 105.8234162)",
+  "_hinh_lo": "ĐOÁN: chữ nhật 15 m (mặt tiền, lời) × 16,7 m (= 250/15, suy ra) song song ngõ W952878056 — chưa có sơ đồ sổ đỏ"
+ },
+ "tien_ich": {
+  "ban_kinh_m": 1500,
+  "toi_da": 6
+ },
+ "dia_diem": {
+  "xuan_dieu": {
+   "ten": "Phố Xuân Diệu",
+   "ten_osm_re": "^(Phố |Đường )?Xuân Diệu$",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 1600
+  },
+  "dang_thai_mai": {
+   "ten": "Phố Đặng Thai Mai",
+   "ten_osm_re": "^(Phố |Đường )?Đặng Thai Mai$",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 1600
+  },
+  "au_co": {
+   "ten": "Đường Âu Cơ",
+   "ten_osm_re": "^(Phố |Đường )?Âu Cơ$",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 2200
+  },
+  "nghi_tam": {
+   "ten": "Đường Nghi Tàm",
+   "ten_osm_re": "^(Phố |Đường )?Nghi Tàm$",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 2200
+  },
+  "vo_chi_cong": {
+   "ten": "Đại lộ Võ Chí Công",
+   "ten_osm_re": "^(Phố |Đường |Đại lộ )?Võ Chí Công$",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 4500
+  },
+  "ho_tay": {
+   "ten": "Hồ Tây",
+   "loai": "vung",
+   "osm": "W9635863"
+  },
+  "cong_vien_gan": {
+   "ten": "Công viên",
+   "loai": "vung",
+   "osm": "W196085431"
+  },
+  "phu_tay_ho": {
+   "ten": "Phủ Tây Hồ",
+   "loai": "diem",
+   "osm": "W941901613"
+  },
+  "pho_co": {
+   "ten": "Phố cổ Hà Nội",
+   "loai": "vung",
+   "osm": "R20663236"
+  },
+  "noi_bai": {
+   "ten": "Sân bay Nội Bài",
+   "loai": "vung",
+   "osm": "R20136775"
+  },
+  "metro_2": {
+   "ten": "Tuyến số 2",
+   "ten_osm_re": "Số 2 Hà Nội",
+   "the": "railway",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 6000
+  },
+  "metro_5": {
+   "ten": "Tuyến số 5",
+   "ten_osm_re": "[Ss]ố 5( Hà Nội|$)",
+   "the": "railway",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 6000
+  },
+  "metro_10": {
+   "ten": "Tuyến số 10",
+   "ten_osm_re": "số 10 Hà Nội",
+   "the": "railway",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 6000
+  },
+  "metro_14": {
+   "ten": "Tuyến số 14",
+   "ten_osm_re": "sô 14 Hà Nội",
+   "the": "railway",
+   "quanh": [
+    21.063,
+    105.8271
+   ],
+   "ban_kinh_m": 6000
+  },
+  "quang_an": {
+   "ten": "Phố Quảng An",
+   "ten_osm_re": "^(Phố |Đường )?Quảng An$",
+   "quanh": [
+    21.0596,
+    105.8265
+   ],
+   "ban_kinh_m": 520,
+   "_vi_sao": "khách yêu cầu chỉ rõ đường Quảng An; tránh 'Phố Quảng An' ở Hồng Hà (~21.07, 105.83)"
+  },
+  "nha_hat": {
+   "ten": "Nhà hát Cánh Buồm",
+   "loai": "diem",
+   "osm": "W196084608",
+   "_vi_sao": "OSM: Nhà hát Opera Hà Nội (Cánh Buồm), landuse=construction — khách yêu cầu 'gần Nhà hát Cánh Buồm'"
+  },
+  "ngo_truoc_nha": {
+   "ten": "Ngõ trước lô",
+   "loai": "tuyen",
+   "osm": "W952878056",
+   "_vi_sao": "way residential sát ghim 5 m — dùng xoay hình lô (song song ngõ)"
+  }
+ },
+ "canh": [
+  {
+   "loai": "ban_do",
+   "tu": 0.0,
+   "den": 5.18,
+   "cam": [
+    {
+     "t": 0.0,
+     "tam": "nha",
+     "zoom": 13.0
+    },
+    {
+     "t": 0.15,
+     "dai": 2.6,
+     "tam": "nha",
+     "zoom": 17.3,
+     "lech_y": -170
+    }
+   ],
+   "nha": {
+    "t": 1.0,
+    "nhan": "VỊ TRÍ ĐẤT",
+    "mui_ten": "trai"
+   },
+   "tieu_de_tren": [
+    {
+     "t": 0.1,
+     "den": 2.9,
+     "dong": [
+      "Đất thổ cư liền thổ",
+      "250m² · TÂY HỒ"
+     ],
+     "vang": [
+      "250m²",
+      "TÂY HỒ"
+     ]
+    },
+    {
+     "t": 2.96,
+     "dong": [
+      "Pháp lý chuẩn chỉnh",
+      "SỔ ĐỎ VUÔNG VẮN"
+     ],
+     "vang": [
+      "SỔ ĐỎ VUÔNG VẮN"
+     ]
+    }
+   ],
+   "_loi": "Sở hữu ngay mảnh đất thổ cư liền thổ 250m2, pháp lý chuẩn chỉnh với sổ đỏ vuông vắn"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 5.18,
+   "den": 8.3,
+   "cam": [
+    {
+     "t": 5.18,
+     "tam": "nha",
+     "zoom": 16.8
+    },
+    {
+     "t": 5.3,
+     "dai": 1.8,
+     "tam": "nha",
+     "zoom": 14.9,
+     "lech_y": -120
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 6.54,
+     "dong": [
+      "Khu ĐẤT VÀNG đắt giá",
+      "nhất TÂY HỒ"
+     ],
+     "vang": [
+      "ĐẤT VÀNG",
+      "TÂY HỒ"
+     ]
+    }
+   ],
+   "dia_danh": true,
+   "_loi": "sẵn sàng giao dịch ngay tại khu vực đất vàng đắt giá nhất Tây Hồ"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 8.3,
+   "den": 11.4,
+   "cam": [
+    {
+     "t": 8.3,
+     "tam": "nha",
+     "zoom": 15.2
+    },
+    {
+     "t": 8.35,
+     "dai": 1.3,
+     "vua": [
+      "nha",
+      "xuan_dieu",
+      "dang_thai_mai"
+     ],
+     "le": 0.06,
+     "vung_y": [
+      0.2,
+      0.72
+     ]
+    }
+   ],
+   "neon": [
+    {
+     "tuyen": "xuan_dieu",
+     "t": 9.8,
+     "dai_ve": 0.8,
+     "ten": "XUÂN DIỆU",
+     "lech_m": 0,
+     "lech_px": 50,
+     "neo": [
+      21.06522,
+      105.82753
+     ]
+    },
+    {
+     "tuyen": "dang_thai_mai",
+     "t": 10.42,
+     "dai_ve": 0.8,
+     "ten": "ĐẶNG THAI MAI",
+     "lech_m": 0,
+     "lech_px": 50,
+     "neo": [
+      21.06127,
+      105.82395
+     ]
+    }
+   ],
+   "_loi": "nằm ngay giữa tâm điểm phố Xuân Diệu và Đặng Thai Mai"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 11.4,
+   "den": 15.46,
+   "cam": [
+    {
+     "t": 11.4,
+     "tam": "nha",
+     "zoom": 16.0
+    },
+    {
+     "t": 11.45,
+     "dai": 1.3,
+     "vua": [
+      "nha",
+      "dai_su_quan_1",
+      "dai_su_quan_3",
+      "khach_san_1",
+      "khach_san_3"
+     ],
+     "le": 0.16,
+     "theo_duong": false,
+     "vung_y": [
+      0.31,
+      0.72
+     ]
+    }
+   ],
+   "vong": [
+    {
+     "r_m": 500,
+     "t": 11.8
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 11.4,
+     "den": 12.8,
+     "dong": [
+      "Nơi định vị",
+      "ĐẲNG CẤP SỐNG"
+     ],
+     "vang": [
+      "ĐẲNG CẤP SỐNG"
+     ]
+    },
+    {
+     "t": 12.84,
+     "dong": [
+      "Tập trung khách",
+      "CHÂU ÂU · NHÀ GIÀU"
+     ],
+     "vang": [
+      "CHÂU ÂU · NHÀ GIÀU"
+     ]
+    }
+   ],
+   "tien_ich": [
+    {
+     "id": "dai_su_quan_1",
+     "t": 12.98,
+     "duong": false,
+     "nhan": "Đại sứ quán Ai Cập"
+    },
+    {
+     "id": "dai_su_quan_3",
+     "t": 13.62,
+     "duong": false,
+     "nhan": "Đại sứ quán Ca-dắc-xtan"
+    },
+    {
+     "id": "khach_san_1",
+     "t": 14.4,
+     "duong": false,
+     "nhan": "Somerset"
+    },
+    {
+     "id": "khach_san_3",
+     "t": 14.78,
+     "duong": false,
+     "nhan": "Fraser Suites"
+    }
+   ],
+   "_loi": "thủ phủ sinh sống của cộng đồng người nước ngoài và giới nhà giàu thủ đô"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 15.46,
+   "den": 19.14,
+   "cam": [
+    {
+     "t": 15.46,
+     "tam": "nha",
+     "zoom": 16.2
+    },
+    {
+     "t": 15.5,
+     "dai": 1.1,
+     "tam": [
+      21.0654,
+      105.8222
+     ],
+     "zoom": 18.0
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 15.46,
+     "dong": [
+      "Hồ Tây chỉ cách",
+      "≈ 130 M"
+     ],
+     "vang": [
+      "≈ 130 M"
+     ]
+    }
+   ],
+   "vung_sang": [
+    {
+     "vung": "ho_tay",
+     "t": 16.14,
+     "mau": [
+      40,
+      160,
+      255
+     ],
+     "nhan": false,
+     "a_to": 0.12
+    }
+   ],
+   "chu_lon": [
+    {
+     "t": 16.2,
+     "chu": "HỒ TÂY",
+     "tai": [
+      21.06525,
+      105.8208
+     ],
+     "goc": -6,
+     "co": 86
+    }
+   ],
+   "thuoc": [
+    {
+     "t": 16.14,
+     "a": "nha",
+     "b": "ho_6",
+     "chu": "≈ 130 m"
+    }
+   ],
+   "tien_ich": [
+    {
+     "id": "cong_vien_gan",
+     "t": 17.24,
+     "duong": true,
+     "kieu": "di_bo",
+     "nhom": "cong_vien",
+     "nhan": "Công viên",
+     "dai_ve": 0.9
+    }
+   ],
+   "_loi": "chỉ cách hồ Tây và không gian công viên xanh mát vài bước chân dạo bộ"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 19.14,
+   "den": 22.14,
+   "cam": [
+    {
+     "t": 19.14,
+     "tam": "nha",
+     "zoom": 16.0
+    },
+    {
+     "t": 19.2,
+     "dai": 1.3,
+     "vua": [
+      "nha",
+      "dang_thai_mai",
+      "quang_an",
+      "xuan_dieu"
+     ],
+     "le": 0.06,
+     "vung_y": [
+      0.22,
+      0.72
+     ]
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 19.14,
+     "dong": [
+      "Giao thông",
+      "THUẬN TIỆN"
+     ],
+     "vang": [
+      "THUẬN TIỆN"
+     ]
+    }
+   ],
+   "neon": [
+    {
+     "tuyen": "dang_thai_mai",
+     "t": 19.7,
+     "dai_ve": 0.7,
+     "ten": "ĐƯỜNG ĐẶNG THAI MAI",
+     "lech_m": 0,
+     "lech_px": 46,
+     "neo": [
+      21.05975,
+      105.82336
+     ],
+     "co": 50
+    },
+    {
+     "tuyen": "quang_an",
+     "t": 20.5,
+     "dai_ve": 0.7,
+     "ten": "ĐƯỜNG QUẢNG AN",
+     "neo": [
+      21.0612,
+      105.82805
+     ],
+     "lech_m": 0,
+     "lech_px": -46,
+     "co": 50
+    },
+    {
+     "tuyen": "xuan_dieu",
+     "t": 20.92,
+     "dai_ve": 0.6,
+     "ten": false
+    }
+   ],
+   "_loi": "Giao thông vô cùng thuận tiện với các trục đường lớn, rộng thoáng"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 22.14,
+   "den": 26.3,
+   "cam": [
+    {
+     "t": 22.14,
+     "tam": "nha",
+     "zoom": 15.6
+    },
+    {
+     "t": 22.2,
+     "dai": 1.3,
+     "vua": [
+      "nha",
+      "nha_hat",
+      "phu_tay_ho"
+     ],
+     "le": 0.2,
+     "vung_y": [
+      0.26,
+      0.72
+     ]
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 22.2,
+     "den": 24.9,
+     "dong": [
+      "Gần",
+      "NHÀ HÁT CÁNH BUỒM"
+     ],
+     "vang": [
+      "NHÀ HÁT CÁNH BUỒM"
+     ]
+    },
+    {
+     "t": 24.96,
+     "dong": [
+      "Kết nối",
+      "PHỦ TÂY HỒ"
+     ],
+     "vang": [
+      "PHỦ TÂY HỒ"
+     ]
+    }
+   ],
+   "bien_anh": [
+    {
+     "diem": "nha_hat",
+     "t": 23.4,
+     "nhan": "Nhà hát Cánh Buồm",
+     "duong": true,
+     "dai_ve": 1.0,
+     "cot": 150,
+     "rong": 300
+    }
+   ],
+   "tien_ich": [
+    {
+     "id": "phu_tay_ho",
+     "t": 25.36,
+     "duong": true,
+     "kieu": "o_to",
+     "nhom": "di_tich",
+     "nhan": "Phủ Tây Hồ",
+     "dai_ve": 1.2
+    }
+   ],
+   "_loi": "Ô tô ra vào thoải mái, dễ dàng kết nối sang phủ Tây Hồ"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 26.3,
+   "den": 30.46,
+   "cam": [
+    {
+     "t": 26.3,
+     "tam": "nha",
+     "zoom": 15.2
+    },
+    {
+     "t": 26.32,
+     "dai": 1.1,
+     "vua": [
+      "nha",
+      "pho_co"
+     ],
+     "le": 0.12,
+     "theo_duong": false,
+     "vung_y": [
+      0.2,
+      0.72
+     ]
+    },
+    {
+     "t": 27.75,
+     "dai": 1.4,
+     "vua": [
+      "nha",
+      "noi_bai"
+     ],
+     "le": 0.08,
+     "theo_duong": false,
+     "vung_y": [
+      0.2,
+      0.72
+     ]
+    },
+    {
+     "t": 29.3,
+     "dai": 0.9,
+     "vua": [
+      "nha",
+      "vo_chi_cong"
+     ],
+     "le": 0.08,
+     "theo_duong": false,
+     "vung_y": [
+      0.22,
+      0.72
+     ]
+    }
+   ],
+   "tien_ich": [
+    {
+     "id": "pho_co",
+     "t": 27.4,
+     "duong": true,
+     "kieu": "o_to",
+     "nhom": "trung_tam",
+     "nhan": "Phố cổ Hà Nội",
+     "dai_ve": 1.0
+    },
+    {
+     "id": "noi_bai",
+     "t": 28.9,
+     "duong": true,
+     "kieu": "o_to",
+     "nhom": "san_bay",
+     "nhan": "Sân bay Nội Bài",
+     "dai_ve": 1.2
+    }
+   ],
+   "neon": [
+    {
+     "tuyen": "vo_chi_cong",
+     "t": 29.45,
+     "dai_ve": 0.6,
+     "ten": "ĐẠI LỘ VÕ CHÍ CÔNG",
+     "lech_m": 0,
+     "lech_px": 44,
+     "neo": "nha",
+     "co": 48
+    }
+   ],
+   "_loi": "Di chuyển thẳng vào trung tâm phố cổ hay ra thẳng sân bay Nội Bài qua đại lộ Võ Chí Công"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 30.46,
+   "den": 34.56,
+   "cam": [
+    {
+     "t": 30.46,
+     "tam": "nha",
+     "zoom": 11.4
+    },
+    {
+     "t": 30.5,
+     "dai": 1.6,
+     "tam": "nha",
+     "zoom": 14.4
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 31.4,
+     "dong": [
+      "Hưởng lợi lớn",
+      "QUY HOẠCH HẠ TẦNG"
+     ],
+     "vang": [
+      "QUY HOẠCH HẠ TẦNG"
+     ]
+    }
+   ],
+   "vong": [
+    {
+     "r_m": 1000,
+     "t": 32.4
+    }
+   ],
+   "_loi": "Đặc biệt, vị trí này còn hưởng lợi lớn từ quy hoạch hạ tầng giao thông đô thị"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 34.56,
+   "den": 40.28,
+   "cam": [
+    {
+     "t": 34.56,
+     "tam": "nha",
+     "zoom": 14.4
+    },
+    {
+     "t": 34.6,
+     "dai": 1.4,
+     "vua": [
+      "nha",
+      "metro_2",
+      "metro_5",
+      "metro_10",
+      "metro_14"
+     ],
+     "le": 0.04,
+     "vung_y": [
+      0.22,
+      0.72
+     ]
+    }
+   ],
+   "tieu_de_tren": [
+    {
+     "t": 35.46,
+     "dong": [
+      "Đường sắt đô thị",
+      "METRO TƯƠNG LAI"
+     ],
+     "vang": [
+      "METRO TƯƠNG LAI"
+     ]
+    }
+   ],
+   "tuyen_sang": [
+    {
+     "tuyen": "metro_2",
+     "t": 35.12,
+     "kieu": "metro",
+     "mau": [
+      232,
+      56,
+      68
+     ],
+     "ten": "Tuyến số 2"
+    },
+    {
+     "tuyen": "metro_5",
+     "t": 35.46,
+     "kieu": "metro",
+     "mau": [
+      64,
+      156,
+      255
+     ],
+     "ten": "Tuyến số 5"
+    },
+    {
+     "tuyen": "metro_10",
+     "t": 35.82,
+     "kieu": "metro",
+     "mau": [
+      90,
+      222,
+      170
+     ],
+     "ten": "Tuyến số 10"
+    },
+    {
+     "tuyen": "metro_14",
+     "t": 36.04,
+     "kieu": "metro",
+     "mau": [
+      245,
+      120,
+      180
+     ],
+     "ten": "Tuyến số 14"
+    }
+   ],
+   "_loi": "Và các tuyến đường sắt đô thị Metro tương lai, giúp kết nối giao thông công cộng hiện đại và gia tăng giá trị bất động sản bền vững"
+  },
+  {
+   "loai": "ban_do",
+   "tu": 40.28,
+   "den": 66.19,
+   "nen_sang": 0.92,
+   "cam": [
+    {
+     "t": 40.28,
+     "tam": "nha",
+     "zoom": 16.4
+    },
+    {
+     "t": 40.3,
+     "dai": 1.5,
+     "tam": "nha",
+     "zoom": 21.2,
+     "lech_y": 180
+    },
+    {
+     "t": 45.32,
+     "dai": 1.0,
+     "tam": "nha",
+     "zoom": 18.0
+    }
+   ],
+   "troi": 0.008,
+   "nha": false,
+   "lo_dat": {
+    "t": 41.0,
+    "theo_duong": "ngo_truoc_nha",
+    "rong_m": 15,
+    "sau_m": 16.7,
+    "nhan": "250m²",
+    "t_nhan": 41.54,
+    "canh": [
+     {
+      "canh": "truoc",
+      "chu": "15m",
+      "t": 44.78
+     }
+    ],
+    "doan": true,
+    "den": 45.6
+   },
+   "tieu_de_tren": [
+    {
+     "t": 49.24,
+     "den": 51.9,
+     "dong": [
+      "Căn hộ dịch vụ cao cấp",
+      "LUÔN THIẾU PHÒNG"
+     ],
+     "vang": [
+      "LUÔN THIẾU PHÒNG"
+     ]
+    }
+   ],
+   "toi": [
+    [
+     40.28,
+     0.0
+    ],
+    [
+     45.1,
+     0.0
+    ],
+    [
+     45.5,
+     0.4
+    ],
+    [
+     55.2,
+     0.4
+    ],
+    [
+     55.5,
+     0.5
+    ],
+    [
+     57.0,
+     0.5
+    ],
+    [
+     57.4,
+     0.62
+    ]
+   ],
+   "_loi": "diện tích 250 m², mặt tiền 15 m … ảnh nhà … pháp lý … giá … liên hệ"
+  }
+ ],
+ "the": [
+  {
+   "kieu": "anh",
+   "tu": 2.96,
+   "den": 5.15,
+   "anh": "Sân và căn nhà.jpg",
+   "chu": "Sân và căn nhà",
+   "vi_tri": "phai",
+   "rong": 400,
+   "cao": 533,
+   "y": 770
+  },
+  {
+   "kieu": "anh",
+   "tu": 45.32,
+   "den": 51.98,
+   "vi_tri": "giua",
+   "rong": 600,
+   "cao": 800,
+   "y": 870,
+   "phu_toi": 0.0,
+   "anh": [
+    "cổng trước nhà.jpg",
+    "sân trước nhà.jpg",
+    "sân nhà.jpg",
+    "Tầng 2 nhìn xuống sân.jpg"
+   ],
+   "chu": [
+    "Cổng trước nhà",
+    "Sân trước nhà",
+    "Sân nhà",
+    "Tầng 2 nhìn xuống sân"
+   ]
+  },
+  {
+   "kieu": "anh",
+   "tu": 51.98,
+   "den": 55.3,
+   "vi_tri": "giua",
+   "rong": 640,
+   "cao": 480,
+   "y": 640,
+   "phu_toi": 0.0,
+   "anh": "sân sau nhà.jpg",
+   "chu": "Sân sau nhà"
+  },
+  {
+   "kieu": "thong_tin",
+   "tu": 52.0,
+   "den": 55.3,
+   "tieu_de": "Pháp lý",
+   "dong": [
+    {
+     "icon": "so_do",
+     "nhan": "Pháp lý",
+     "gia_tri": "An toàn tuyệt đối",
+     "t": 52.1
+    },
+    {
+     "icon": "so_do",
+     "nhan": "Sổ đỏ",
+     "gia_tri": "Chính chủ · sang tên ngay",
+     "t": 53.54
+    }
+   ]
+  },
+  {
+   "kieu": "gia",
+   "tu": 55.36,
+   "den": 57.16,
+   "nhan": "Giá chào",
+   "gia": "Nhỉnh 80 tỷ",
+   "y": 820
+  },
+  {
+   "kieu": "lien_he",
+   "tu": 57.16,
+   "den": 66.19,
+   "ten": "Lê Anh",
+   "sdt": "0904 28 28 58",
+   "sdt_tu": [
+    60.0,
+    60.66,
+    61.22,
+    61.68
+   ],
+   "nhan": "Gọi ngay cho em",
+   "t_bam": 62.3,
+   "dong_cuoi": "Đi xem thực tế lô đất",
+   "dong_cuoi_tu": 62.5,
+   "y": 430
+  }
+ ],
+ "sua_chu": {
+  "250m2": "250m²",
+  "Đảng Thái Mai": "Đặng Thai Mai",
+  "đường sắc": "đường sắt",
+  "nội bài": "Nội Bài",
+  "Võ Trí Công": "Võ Chí Công",
+  "250m vuông": "250m vuông",
+  "quy đất": "quỹ đất",
+  "chính trù sang tiên": "chính chủ sang tên",
+  "Giá trào": "Giá chào"
+ },
+ "cai_dat": {
+  "sub_kieu": "karaoke",
+  "sub_y": 1545,
+  "sub_co": 56,
+  "sub_max_chu": 6,
+  "sub_max_ky_tu": 30,
+  "hoa_tan": 0.25,
+  "lufs": -14.0,
+  "duoi": 0.9,
+  "nguon_anh": true,
+  "sfx": true,
+  "nhac": "khong",
+  "dia_danh": true,
+  "dinh_vi": false,
+  "cap_tu": [
+   "thổ cư",
+   "liền thổ",
+   "sổ đỏ",
+   "pháp lý",
+   "tây hồ",
+   "hồ tây",
+   "xuân diệu",
+   "đặng thai",
+   "thai mai",
+   "nội bài",
+   "chí công",
+   "phố cổ",
+   "mặt tiền",
+   "diện tích",
+   "căn hộ",
+   "dịch vụ",
+   "dinh thự",
+   "sang tên",
+   "chính chủ",
+   "điện thoại",
+   "lê anh",
+   "đường sắt",
+   "đô thị",
+   "sân bay",
+   "nước ngoài",
+   "nhà giàu",
+   "bước chân",
+   "ô tô",
+   "đất vàng",
+   "giá chào",
+   "80 tỷ",
+   "quỹ đất"
+  ],
+  "phong_cach": "mau"
+ },
+ "_hook_cu": {
+  "tu": 0.0,
+  "den": 2.9,
+  "dong1": "Đất thổ cư liền thổ · Tây Hồ",
+  "dong2": "250 m² · sổ đỏ vuông vắn",
+  "fade": true
+ }
+}
