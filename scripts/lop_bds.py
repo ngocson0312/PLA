@@ -718,6 +718,18 @@ class TheLienHe:
         self.nhan = np.asarray(C.chu((it.get("nhan") or "LIÊN HỆ NGAY").upper(), "xbold", 34, fill=(200, 214, 236), track=4))
         self.ten = np.asarray(C.chu(it["ten"].upper(), "black", 74, fill=C.VANG, shadow=(0, 4, 6, 0.5), track=2)) \
             if it.get("ten") else None
+        if self.ten is not None:
+            co_ten = 74
+            while self.ten.shape[1] > 840 and co_ten > 28:
+                co_ten -= 2
+                self.ten = np.asarray(C.chu(it["ten"].upper(), "black", co_ten, fill=C.VANG, shadow=(0, 4, 6, 0.5), track=2))
+        self.noi_dung = None
+        if it.get("noi_dung"):
+            dong = []
+            for line in it["noi_dung"].splitlines():
+                dong.extend(C.bo_dong(line, "semi", 36, 820))
+            if dong:
+                self.noi_dung = np.asarray(C.xep_doc([C.chu(s, "semi", 36, fill=C.TRANG) for s in dong], gap=10))
         # số điện thoại: HIỆN theo nhóm 4-3-3 (góp ý 09/11: nhóm theo lời đọc "0904 28 28 58" cách nhau quá) — từng chữ số
         # bật đúng lúc đọc; `sdt` giữ cách nhóm THEO LỜI (khớp sdt_tu), `sdt_hien` (tuỳ chọn) ép cách nhóm hiện
         nhom_doc = it["sdt"].split()
@@ -736,8 +748,8 @@ class TheLienHe:
         self.so = so
         self.sdt = [self.so_anh[ch] for ch in so]
         self.ic_dt = np.asarray(BT.icon("dien_thoai", 64, C.VANG))
-        gl = BT.icon("dien_thoai", 58, C.TRANG)
-        self.nut, self.x_ic = CT._nut(XANH_GOI, "GỌI NGAY", rong=600, cao=132, cho_icon=58)
+        gl = BT.icon("dien_thoai" if so else "nguoi", 58, C.TRANG)
+        self.nut, self.x_ic = CT._nut(XANH_GOI, "GỌI NGAY" if so else "LIÊN HỆ", rong=600, cao=132, cho_icon=58)
         self.gl = gl
         self.dong_cuoi = None
         if it.get("dong_cuoi"):
@@ -761,9 +773,14 @@ class TheLienHe:
         if self.ten is not None:
             self.y_ten = y + self.ten.shape[0] / 2
             y += self.ten.shape[0] + 26
-        hs = max(s.shape[0] for s in self.sdt)
+        hs = max((s.shape[0] for s in self.sdt), default=0)
         self.y_sdt = y + hs / 2
-        y += hs + 40
+        if hs:
+            y += hs + 40
+        self.y_noi_dung = None
+        if self.noi_dung is not None:
+            self.y_noi_dung = y + self.noi_dung.shape[0] / 2
+            y += self.noi_dung.shape[0] + 26
         self.y_nut = y + 66
         y += 132 + 30
         self.y_cuoi = None
@@ -805,7 +822,7 @@ class TheLienHe:
         x = (W - tong) / 2
         t_dau = next((x_ for x_ in self.t_so if x_ is not None), self.t0 + 0.5) - self.t0
         vi = ease_out(ramp(tl, t_dau - 0.1, 0.3))
-        if vi > 0:
+        if vi > 0 and self.so:
             C.dan_giua(frame, self.ic_dt, x + self.ic_dt.shape[1] / 2, self.y_sdt + dy, vi, max(0.05, DN.back_out(vi)))
         x += self.ic_dt.shape[1] + 22
         i = 0
@@ -821,7 +838,10 @@ class TheLienHe:
                     C.dan_giua(frame, self.so_anh[ch], x + w_ / 2, self.y_sdt + dy, clamp(v * 2), max(0.05, DN.back_out(v)))
                 x += o[i]
                 i += 1
-        # nút GỌI NGAY: hiện sau số đầu, ống nghe rung, tay bấm ở t_bam
+        if self.noi_dung is not None:
+            v = ease_out(ramp(tl, 0.5, 0.3))
+            C.dan_giua(frame, self.noi_dung, W / 2, self.y_noi_dung + dy + 16 * (1 - v), v)
+        # Nút liên hệ giữ động tác bàn tay bấm như mẫu.
         vn = ramp(tl, t_dau + 0.2, 0.35)
         if vn > 0:
             cy = self.y_nut + dy

@@ -98,7 +98,7 @@ def chu_nha(plan):
                 out.append((tag + ".lo_dat.canh[%d].chu" % j, e["chu"]))
     for i, t in enumerate(plan.get("the", []) or []):
         tag = "the[%d] %s" % (i, t.get("kieu"))
-        for k in ("tieu_de", "nhan", "gia", "ten", "sdt", "dong_cuoi"):
+        for k in ("tieu_de", "nhan", "gia", "ten", "sdt", "noi_dung", "dong_cuoi"):
             if isinstance(t.get(k), str):
                 out.append((tag + "." + k, t[k]))
         ch = t.get("chu")
@@ -257,7 +257,9 @@ def kiem_ke_hoach(work, in_ra=True):
         if k == "lien_he":
             so = re.sub(r"\D", "", t.get("sdt", ""))
             loi_so = re.sub(r"\D", "", " ".join(w["w"] for w in words))
-            if not so or so not in loi_so:
+            if not so and not (t.get("ten") or t.get("noi_dung")):
+                loi.append("the[%d] lien_he: chưa có thông tin liên hệ" % i)
+            elif so and so not in loi_so:
                 tt_so = re.sub(r"\D", "", str(((plan.get("thong_tin") or {}).get("lien_he") or {}).get("sdt", "")))
                 if so != tt_so or not (plan.get("thong_tin") or {}).get("_nguon", "").startswith(("người dùng", "file")):
                     loi.append("the[%d] lien_he: SĐT %s không có trong lời đọc / thông tin người dùng" % (i, t.get("sdt")))

@@ -27,13 +27,19 @@ riêng: trọng tâm là **1 ngôi nhà + tiện ích quanh nó**, không phải
 6. **Metro / quy hoạch** chỉ vẽ tuyến CÓ trong OSM (`railway=construction|proposed|subway`), tên theo OSM, hỏi ở cổng duyệt.
 7. **Mỗi nhắc tên = 1 hình**: ghim / tô sáng hiện ĐÚNG giây đọc tên (`t` = giây chữ đó trong loi_doc.txt); đường đi vẽ
    TRƯỚC đó `dai_ve` giây để ghim bật ra đúng lúc đọc.
-8. **CTA gọi điện không SFX** (góp ý cũ: chime cuối chói). **Số điện thoại HIỆN theo nhóm 4-3-3** (`0904 282 858`, chốt
-   09/11/2026: nhóm theo lời đọc "0904 28 28 58" cách nhau quá) — nhóm sát nhau (cách 20 px), từng CHỮ SỐ bật đúng giây đọc
-   (`sdt_tu` vẫn ghi theo nhóm LỜI ĐỌC). 11 số → 4-3-4, 8 số → 4-4; ép cách khác bằng `sdt_hien`.
-   **Lời KHÔNG đọc số điện thoại ⇒ cuối video BẮT BUỘC thẻ `theo_doi`** (chốt 09/11/2026, "CTA có button, anim bàn tay
-   nhấn FOLLOW, xịn xò"): avatar vòng màu xoay + huy hiệu "+" → nút FOLLOW gradient hồng có vệt sáng quét → tay nhấn
-   (sóng trắng, pháo giấy, sao lấp lánh) → "✓ ĐÃ FOLLOW" → tay nhấn chip ♥ (tim bay) → chuông tự rung. Không SFX.
-   `kiem-kh` báo ⛔ nếu video không có CTA nào (`cai_dat.cta: false` để tắt khi người dùng bảo).
+8. **Ô nhập riêng, cập nhật 11/11/2026 theo chủ dự án.**
+   - Vị trí trên Google Maps là ô bắt buộc. Khách mở Google Maps, tìm đúng nhà đất, nhấp phải vào ghim,
+     bấm dòng tọa độ đầu tiên để sao chép rồi dán vào ô. Nhận tọa độ, link Maps hoặc địa chỉ đã chép.
+     Tọa độ ghim ưu tiên hơn tâm khung nhìn của link. Địa chỉ gần đúng phải báo ở cổng duyệt.
+   - Thông tin căn nhà là ô bắt buộc khác, gồm diện tích, giá, mặt tiền, pháp lý, số tầng và đặc điểm căn nhà.
+   - CTA / Thông tin liên hệ là ô tùy chọn cuối form. Có nhập thì dùng đúng tên, SĐT hoặc thông tin liên hệ đó
+     để hiện thẻ liên hệ như mẫu, với bàn tay bấm nút. Giọng đọc không cần đọc SĐT trong ô CTA.
+     Để trống thì BẮT BUỘC dùng thẻ theo_doi với biểu tượng nhà, nút FOLLOW và bàn tay bấm.
+     Không lấy tên hoặc SĐT từ giọng đọc hay ô thông tin căn nhà thay cho ô CTA trống.
+   - CLI mới dùng quet --vi-tri "<tọa độ/địa chỉ/link Google Maps>" --info <file thông tin nhà> --cta "<liên hệ>".
+     Bỏ --cta hoặc truyền chuỗi rỗng để hiện FOLLOW. Dữ liệu lưu tại nguoi_nhap.json.
+     doc_ke_hoach áp lại vị trí và lựa chọn CTA trước khi duyệt, dựng, tự kiểm.
+   - Lần chạy cũ chưa có nguoi_nhap.json tiếp tục đọc kế hoạch đã duyệt của phiên bản cũ.
 9. Sub karaoke nguyên văn (Montserrat, chữ đang đọc vàng, y 1545); `sua_chu` chỉ sửa lỗi nhận dạng (tên phố, chính tả).
 10. Nguồn ảnh luôn ghi đáy khung: `Ảnh: Esri World Imagery · Dữ liệu: © OpenStreetMap contributors · Đường đi: OSRM`.
 11. −14 LUFS / −1 dBTP, mã hoá hình 1 lần (x264 bt709), video kéo 0,9 s sau tiếng cuối, ra `<audio>_BDTI.mp4` (không ghi đè:
@@ -59,8 +65,9 @@ riêng: trọng tâm là **1 ngôi nhà + tiện ích quanh nó**, không phải
 
 ## Cần gì
 
-- 1 file audio giọng đọc (mp3/m4a/wav). Thư mục ảnh / clip nhà (tuỳ chọn, `--res`). File thông tin nhà (tuỳ chọn, `--info`
-  .txt/.md/.json: giá, diện tích, mặt tiền, pháp lý, địa chỉ / link bản đồ, tên + SĐT liên hệ).
+- Bắt buộc có 1 file audio giọng đọc (mp3/m4a/wav), vị trí đã sao chép từ Google Maps và thông tin căn nhà.
+- Vị trí dùng ô riêng hoặc --vi-tri. File --info chứa diện tích, giá, mặt tiền, pháp lý và đặc điểm căn nhà.
+- Thư mục ảnh/clip --res và thông tin liên hệ --cta là tùy chọn. CTA trống thì hiện FOLLOW có bàn tay bấm.
 - Mạng (chạy ngoài sandbox): Photon, OSM API, Overpass (overpass-api.de, hay 502 ⇒ tự thử lại 4 lần), OSRM
   (router.project-osrm.org ô tô, routing.openstreetmap.de đi bộ), ô ảnh Esri. Cache ở `~/.cache/ban-do-tien-ich-nha-dat`
   và dùng chung ô ảnh / OSM với `~/.cache/ban-do-quy-hoach-bds-ve-tinh`.
@@ -70,9 +77,9 @@ riêng: trọng tâm là **1 ngôi nhà + tiện ích quanh nó**, không phải
 
 Mọi lệnh: `python -I -X utf8 .claude\skills\ban-do-tien-ich-nha-dat\scripts\run.py <lệnh> …` (work = `<audio>_bdti_work`).
 
-1. `quet --audio <file> [--res <thư mục>] [--info <file>]` → `loi_doc.txt` (chữ@giây), `so_lieu.txt`, `tai_nguyen.jpg`
+1. `quet --audio <file> --vi-tri "<vị trí Google Maps>" --info <file> [--res <thư mục>] [--cta "<liên hệ>"]` → `loi_doc.txt` (chữ@giây), `so_lieu.txt`, `tai_nguyen.jpg`
    (ảnh + khung giữa mỗi clip, tên file + cỡ), `thong_tin_nha.txt`, khung `ke_hoach.json`. **Claude MỞ tai_nguyen.jpg.**
-2. Điền `nha` (toạ độ: `run.py tim "<địa chỉ / tên phố>"`; giao 2 phố thì lấy giữa, ghi `_vi_sao` ĐOÁN), `khu_vuc`,
+2. Giữ vị trí nhà đã đọc từ ô Google Maps trong nguoi_nhap.json. Địa chỉ gần đúng phải báo ở cổng duyệt. Điền `khu_vuc`,
    `thong_tin` (từ lời / file), `tien_ich {ban_kinh_m 1500, toi_da 6, nhom?}`.
 3. `tien-ich --work <dir>` → `tien_ich.json/.txt/.jpg`: mỗi tiện ích có id (`khach_san_2`, `ho_6`…), tên OSM, đường đi thật,
    chữ khoảng cách. **Claude mở tien_ich.jpg + đọc tien_ich.txt**, chọn tiện ích khớp NGHĨA lời (vd "người nước ngoài" ⇒ đại
@@ -89,7 +96,7 @@ Mọi lệnh: `python -I -X utf8 .claude\skills\ban-do-tien-ich-nha-dat\scripts\
 ## CỔNG DUYỆT (lần nào cũng hỏi, có đề xuất mặc định)
 
 - **D1 Vị trí lô đất** (nếu ĐOÁN): xin số nhà / link Google Maps; mặc định giữ vòng "KHU VỰC LÔ ĐẤT".
-- **D2 Liên hệ**: tên (Whisper hay sai tên riêng) + SĐT; mặc định giữ như lời.
+- **D2 Liên hệ**: dùng đúng ô CTA riêng. CTA trống thì giữ FOLLOW có bàn tay, kể cả khi lời đọc có SĐT.
 - **D3 Metro / quy hoạch**: tuyến nào giữ (liệt kê tuyến OSM + khoảng cách); mặc định giữ hết tuyến trong ~3 km.
 - **D4 Âm thanh**: SFX nhẹ có/không, nhạc nền (file của người dùng); nhắc kho SFX chưa rõ giấy phép nếu giao thương mại.
 - **D5 Nhãn nhạy cảm**: tiện ích không tên / khoảng cách lệch lời ("vài bước chân" mà 850 m) — giữ số thật hay bỏ.

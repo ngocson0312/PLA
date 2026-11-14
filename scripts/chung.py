@@ -156,6 +156,12 @@ def nfc(s):
 def doc_ke_hoach(work):
     work = os.path.abspath(work)
     plan = jload(os.path.join(work, "ke_hoach.json"))
+    nhap = os.path.join(work, "nguoi_nhap.json")
+    if os.path.isfile(nhap):
+        from nhap_lieu import ap_cta
+        form = jload(nhap)
+        plan.setdefault("nha", {}).update(form["vi_tri"])
+        ap_cta(plan, form.get("cta", ""))
     for k in ("audio", "res"):
         v = plan.get(k)
         if v and not os.path.isabs(v):

@@ -51,3 +51,20 @@ Nói với Claude: *"Làm video bản đồ nhà đất từ audio `<file>` vớ
 - Phông trong `assets/fonts`: SIL OFL (xem `OFL-*.txt`).
 - SFX trong `assets/sfx`: kho sưu tầm, **chưa rõ giấy phép** (xem `assets/sfx/CREDITS.md`) — video thương mại nên thay bằng
   SFX CC0 / đã mua, giữ nguyên tên file.
+
+
+## Vị trí và CTA riêng (11/11/2026)
+
+Đầu vào bắt buộc gồm giọng đọc, vị trí đã sao chép từ Google Maps và thông tin căn nhà.
+Mở Google Maps, tìm đúng nhà đất, nhấp phải vào ghim rồi bấm dòng tọa độ đầu tiên để sao chép.
+Tham số --vi-tri nhận tọa độ, địa chỉ hoặc link Maps. Tham số --info là file thông tin căn nhà.
+Ảnh/clip --res và liên hệ --cta là tùy chọn.
+
+Có CTA thì cuối video hiện đúng thông tin liên hệ đã nhập. CTA để trống thì dùng biểu tượng nhà,
+nút FOLLOW và bàn tay bấm, kể cả khi giọng đọc có nhắc tên hoặc số điện thoại.
+
+Ví dụ gọi bước quét từ thư mục skill:
+
+    python -I -X utf8 scripts/run.py quet --audio giong_doc.mp3 --vi-tri "21.0651638, 105.8234162" --info thong_tin_nha.txt --cta "Nguyễn Văn An - 0987 654 321"
+
+Muốn dùng FOLLOW thì bỏ --cta. Các bước lập kế hoạch, duyệt, dựng và tự kiểm tiếp tục theo SKILL.md.

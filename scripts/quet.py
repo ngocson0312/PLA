@@ -201,6 +201,8 @@ def main():
     ap.add_argument("--model", default="large-v3")
     ap.add_argument("--kenh", help="kenh.json: {ten, logo, cta}")
     ap.add_argument("--info", help="file thông tin nhà (giá, diện tích, mặt tiền, SĐT, địa chỉ…) .txt/.md/.json")
+    ap.add_argument("--vi-tri", help="tọa độ, địa chỉ hoặc link sao chép từ Google Maps")
+    ap.add_argument("--cta", default="", help="thông tin liên hệ cuối video; bỏ trống để hiện Follow có bàn tay")
     ap.add_argument("--lai", action="store_true", help="nhận dạng lại dù đã có loi_doc.json")
     a = ap.parse_args()
     audio = os.path.abspath(a.audio)
@@ -210,6 +212,14 @@ def main():
     work = os.path.abspath(a.work) if a.work else os.path.join(os.path.dirname(audio),
                                                                os.path.splitext(os.path.basename(audio))[0] + "_bdti_work")
     os.makedirs(work, exist_ok=True)
+    if a.vi_tri is not None:
+        import dia_ly
+        from nhap_lieu import doc_vi_tri
+        try:
+            diem = doc_vi_tri(a.vi_tri, dia_ly.tim)
+        except (ValueError, OSError) as exc:
+            C.die(str(exc))
+        C.jsave(os.path.join(work, "nguoi_nhap.json"), {"vi_tri": diem, "cta": a.cta.strip()})
     info = C.probe(audio)
     dai = info["duration"]
     print("▶ audio %.2f s → %s" % (dai, work))
